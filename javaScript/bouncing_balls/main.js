@@ -4,12 +4,23 @@ const ctx = canvas.getContext("2d");
 const width = (canvas.width = window.innerWidth);
 const height = (canvas.height = window.innerHeight);
 
-// function to generate random number
-function random(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+// Empty array for all our balls
+const balls = [];
+// Set the number of balls we want to create
+while (balls.length < 25) {
+  // Set the size range for our balls
+  const size = random(10, 20);
+  // Call ball object to create new ball
+  const ball = new Ball(
+    random(0 + size, width - size),
+    random(0 + size, height - size),
+    random(-7, 7),
+    random(-7, 7),
+    randomRGB(),
+    size,
+  );
+  // Add the new ball to our array
+  balls.push(ball);
 }
 
-// function to generate random color
-function randomRGB() {
-  return `rgb(${random(0, 255)},${random(0, 255)},${random(0, 255)})`;
-}
+loop();
