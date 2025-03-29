@@ -1,15 +1,13 @@
 // Ball object
-class Ball {
+class Ball extends Shape {
   constructor(x, y, velX, velY, color, size) {
-    // Coordinates
-    this.x = x;
-    this.y = y;
-    // Horizontal & Vertical Velocity
-    this.velX = velX;
-    this.velY = velY;
+    // Coordinates from parent class
+    super(x, y, velX, velY);
     // Color & Size
     this.color = color;
     this.size = size;
+    // Does ball exist 
+    this.exists = Boolean(true);
   }
 
   // Draw method to create our ball
@@ -49,8 +47,8 @@ class Ball {
   collisionDetect() {
     // Loop all the ball objects
     for (const ball of balls) {
-      // Only run on new ball
-      if (this !== ball) {
+      // Only run on existing balls
+      if (!(this === ball) && ball.exists) {
         const dx = this.x - ball.x;
         const dy = this.y - ball.y;
         const distance = Math.sqrt(dx * dx + dy * dy);
