@@ -6,6 +6,10 @@ const height = (canvas.height = window.innerHeight);
 
 // Empty array for all our balls
 const balls = [];
+const activeBalls = document.getElementById('activeBalls');
+let activeCount = 0;
+let evilCircle = new Evil_Circle(25,25);
+evilCircle.setControls();
 // Set the number of balls we want to create
 while (balls.length < 25) {
   // Set the size range for our balls
@@ -21,6 +25,8 @@ while (balls.length < 25) {
   );
   // Add the new ball to our array
   balls.push(ball);
+  activeCount++;
+  activeBalls.innerHTML = activeCount;
 }
 
 loop();

@@ -14,9 +14,14 @@ function loop() {
     ctx.fillRect(0, 0, width, height);
     // Loop all ball objects created
     for (const ball of balls) {
-        ball.draw();
-        ball.update();
-        ball.collisionDetect();
+        evilCircle.draw();
+        evilCircle.checkBounds();
+        evilCircle.collisionDetect();
+        if(ball.exists){
+            ball.draw();
+            ball.update();
+            ball.collisionDetect();
+        }
     }
     // Runs the function a set number of times per second
     requestAnimationFrame(loop);
