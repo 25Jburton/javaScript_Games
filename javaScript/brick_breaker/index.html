@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Brick Breaker Game</title>
+        <link rel="icon" type="image/png" href="https://img.icons8.com/ios-glyphs/30/block-breaker.png" title="Brick Breaker">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id="instructions-card">
+            <div class="title">
+                Instructions
+            </div>
+            <div class="card-body">
+                - Mission is to break all top blocks with our ball.
+                <br>
+                - A life will be lost if the ball goes below our slider.
+                <hr>
+                How to move our slider
+                <br>
+                - Use the A Key to move left
+                <br>
+                - Use the D Key to move right
+            </div>
+        </div>
+        <canvas id="game-board" width="600" height="420"></canvas>
+        <button id="startButton">Start game</button>
+
+        <script src="./main.js"></script>
+        <script src="./functions.js"></script>
+    </body>
+</html>
+
