@@ -27,8 +27,13 @@
     font-size: medium;
 }
 
-#startButton {
+#start-button {
     display: block;
     margin: 10px auto;
     border: solid #005219;
+}
+
+#game-over, #restart-button {
+    display: none;
+    margin: 10px auto;
 }
