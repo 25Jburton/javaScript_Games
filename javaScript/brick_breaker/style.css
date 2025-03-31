@@ -3,8 +3,14 @@
     margin: 0;
 }
 
+body {
+    background: #3c3d3c;
+    color: white;
+    text-align: center;
+}
+
 #game-board {
-    background: #eee;
+    background: #20241f;
     display: block;
     margin: 0 auto;
     border: 0.5rem solid #005219;
@@ -19,7 +25,6 @@
 
 .title {
     font-size: x-large;
-    text-align: center;
 }
 
 .card-body {
@@ -33,7 +38,7 @@
     border: solid #005219;
 }
 
-#game-over, #restart-button {
+#game-over, #restart-button, #game-complete {
     display: none;
     margin: 10px auto;
 }
